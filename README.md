@@ -10,3 +10,15 @@ You must update your system before installing dependencies.
 ```bash
 sudo apt-get update -y
 sudo apt-get upgrade -y
+
+
+Create User
+This user will run bench and all frappe services. Never install bench under root.
+
+Bash
+
+sudo adduser frappe
+sudo usermod -aG sudo frappe
+su - frappe
+cd /home/frappe
+Note: If you do not want to create a new user, just replace frappe with your current username.
